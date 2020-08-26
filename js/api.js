@@ -69,7 +69,8 @@ function getKlasemens() {
             clubImage = data_liga.team.crestUrl.replace(/^http:\/\//i, 'https://');        
           }
           articlesHTML += `
-                <div class="card large col s12 m4">
+              <div class="col s12 m4">
+                <div class="card large">
                   <a href="./klasemen.html?id=${data_liga.team.id}">
                     <div class="card-image waves-effect waves-block waves-light" style="width:50%;height:auto">
                       <img src="${clubImage}" alt="${data_liga.team.name}"/>
@@ -80,10 +81,15 @@ function getKlasemens() {
                     <p>${data_liga.points}</p>
                   </div>
                 </div>
+              </div>
               `;
         });
-        // Sisipkan komponen card ke dalam elemen dengan id #content
-        document.getElementById("klasemen-liga").innerHTML = articlesHTML;
+        
+        try
+        {
+          document.getElementById("klasemen-liga").innerHTML = articlesHTML;
+        }catch(e){};
+        
       })
       .catch(error);
 }
@@ -192,7 +198,6 @@ function getSavedArticleById() {
     let idParam = urlParams.get("id");
     console.log(idParam);
     getById(idParam).then(function(data) {
-      articleHTML = '';
       let articleHTML = `
       <div class="card">
         <div class="card-image waves-effect waves-block waves-light">

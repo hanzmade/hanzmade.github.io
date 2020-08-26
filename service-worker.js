@@ -28,7 +28,10 @@ workbox.precaching.precacheAndRoute([
   { url: '/assets/icons/icon-384x384.png', revision: state },
   { url: '/assets/icons/icon-512x512.png', revision: state },
   { url: '/assets/icons/maskable_icon-192x192.png', revision: state }
-]);
+],
+{
+  ignoreURLParametersMatching: [/.*/]
+});
 
 // Menyimpan cache dari CSS Google Fonts
 workbox.routing.registerRoute(
