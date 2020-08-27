@@ -30,7 +30,7 @@ workbox.precaching.precacheAndRoute([
   { url: '/assets/icons/maskable_icon-192x192.png', revision: state }
 ],
 {
-  ignoreURLParametersMatching: [/.*/]
+  ignoreUrlParametersMatching: [/.*/]
 });
 
 // Menyimpan cache dari CSS Google Fonts
