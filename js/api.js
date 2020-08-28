@@ -33,7 +33,7 @@ function getKlasemens() {
                 clubImage = data_liga.team.crestUrl.replace(/^http:\/\//i, 'https://');        
               }
               articlesHTML += `
-                    <div class="card large col s12 m4">
+                    <div class="card small col s12 m4">
                       <a href="./klasemen.html?id=${data_liga.team.id}">
                         <div class="card-image waves-effect waves-block waves-light" style="width:50%;height:auto">
                           <img src="${clubImage}" />
@@ -70,7 +70,7 @@ function getKlasemens() {
           }
           articlesHTML += `
               <div class="col s12 m4">
-                <div class="card large">
+                <div class="card small">
                   <a href="./klasemen.html?id=${data_liga.team.id}">
                     <div class="card-image waves-effect waves-block waves-light" style="width:50%;height:auto">
                       <img src="${clubImage}" alt="${data_liga.team.name}"/>
@@ -109,7 +109,7 @@ function getKlasemenById() {
               clubImage = data.crestUrl.replace(/^http:\/\//i, 'https://');        
             }
             let articleHTML = `
-              <div class="card large col s12 m6">
+              <div class="card small col s12 m6">
                 <div class="card-image waves-effect waves-block waves-light">
                   <img src="${clubImage}" alt="${data.name}"/>
                 </div>
