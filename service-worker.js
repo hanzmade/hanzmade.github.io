@@ -39,7 +39,7 @@ workbox.precaching.precacheAndRoute([
 
 // Menyimpan cache dari CSS Google Fonts
 workbox.routing.registerRoute(
-  /^https:\/\/api\.football-data\.org/,
+  ({url}) => url.origin === 'https://api.football-data.org',
   workbox.strategies.staleWhileRevalidate({
     cacheName: 'dynamic-football',
   })

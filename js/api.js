@@ -36,12 +36,12 @@ function getKlasemens() {
                     <div class="card small col s12 m4">
                       <a href="./klasemen.html?id=${data_liga.team.id}">
                         <div class="card-image waves-effect waves-block waves-light" style="width:50%;height:auto">
-                          <img src="${clubImage}" />
+                          <img src="${clubImage}" alt="${data_liga.team.name}"/>
                         </div>
                       </a>
                       <div class="card-content">
                         <span class="card-title truncate">${data_liga.team.name}</span>
-                        <p>${data_liga.points}</p>
+                        <p>Points : ${data_liga.points}</p>
                       </div>
                     </div>
                   `;
@@ -78,7 +78,7 @@ function getKlasemens() {
                   </a>
                   <div class="card-content">
                     <span class="card-title truncate">${data_liga.team.name}</span>
-                    <p>${data_liga.points}</p>
+                    <p>Points : ${data_liga.points}</p>
                   </div>
                 </div>
               </div>
